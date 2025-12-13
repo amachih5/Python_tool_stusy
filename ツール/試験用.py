@@ -172,7 +172,7 @@ def sales_tool():
   print(f"{uriagemono}の月ごとの売上: {total_sales_d}, 年間売上: {sum(total_sales_d.values())}円")
 sales_tool()
 """
-
+"""
 #じゃんけん判定
 import random
 
@@ -216,10 +216,35 @@ def janken_judge():
         break
     
 janken_judge()
+"""
+"""
+import pandas as pd
+def sales_auto_tool():
+  sales_d = {}
+  n = int(input("商品の個数を入力: "))
+  for _ in range(n):
+    item = input("商品名: ")
+    price = int(input("売上額: "))
+    sales_d[item] = price
 
+  total = sum(sales_d.values())
+  average = total / n if n > 0 else 0
+  print(f"合計売上: {total}円, 平均: {average:.1f}円")
 
+  df = pd.DataFrame(list(sales_d.item()), columns= ["商品", "売上"])
+  df.to_excel("Excel保存完了!")
+sales_auto_tool()
+"""
 
-
-
+#買い物ツール
+def calc_shopping():
+  shopping_volume = int(input("買い物する個数を入力: "))
+  shopping_d = {}
+  for _ in range(shopping_volume):
+    shopping_thing = input("買うものを入力: ")
+    shopping_value = int(input("値段を入力: "))
+    shopping_d[shopping_thing] = shopping_value
+    return f"買い物をするもの: {shopping_d}、合計: {sum(shopping_d.values())}"
   
-
+shopping = calc_shopping()
+print(shopping)

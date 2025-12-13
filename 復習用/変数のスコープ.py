@@ -39,12 +39,12 @@ print(money)
 
 """
 #今日のミニ課題
-#セブン給料シミュレーション
+#給料シミュレーション
 total = 0
 def work(hours):
   global total
   total += hours * 1140
-  print(f"今日の給料: {hours * 1140}")
+  print(f"今日の給料: {hours * 1100}")
 
 work(5)
 work(6.5)

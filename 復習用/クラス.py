@@ -25,8 +25,8 @@ vinicius.shoot()
 """
 
 """
-#セブン店員クラスを作れ！
-class SevenStaff:
+#店員クラスを作れ！
+class Staff:
   def __init__(self, name):
     self.name = name
     self.wage_total = 0
@@ -36,7 +36,7 @@ class SevenStaff:
     self.wage_total += pay
     print(f"{self.name}さんは今日{hours}時間働いて{pay}円！お疲れ！")
   
-hayato = SevenStaff("はやと")
+hayato = Staff("はやと")
 hayato.work(5.5)
 hayato.work(8)
 print(f"今月の給料合計: {hayato.wage_total}円！")
