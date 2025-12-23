@@ -850,7 +850,6 @@ def player_country_support():
 
 print(player_registration())
 print(player_country_support())
-  
 
 
 
