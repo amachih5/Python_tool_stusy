@@ -4,7 +4,7 @@
 paizaで「ユニークな数字だけ抜き出せ」みたいな問題9割これ！
 """
 
-goals = ["Mbappé", "Vinicius", "Mbappé","Bellingham","Mbappé"]
+#goals = ["Mbappé", "Vinicius", "Mbappé","Bellingham","Mbappé"]
 
 """
 #集合にぶち込む → 重複消える！
