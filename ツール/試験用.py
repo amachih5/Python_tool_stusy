@@ -736,6 +736,7 @@ print(µ_sky_use())
 print(train())
 """
 
+"""
 #東海道新幹線ツール
 tokaido_shinkansen = {
   "こだま": {
@@ -789,7 +790,69 @@ def shinkansen_search():
   
 print(shinkansen_use())
 print(shinkansen_search())
+""" 
+
+
+#レアル・マドリードの選手に応じて2026WCで応援する代表を表示させる神ツール
+#2025-12-23現在の選手のステータス
+real_madrid = {
+  "Mbappé": {
+    "number": 10, "goals": 18, "from": "France", "position": "FW"
+    },
+  "Güler": {
+    "number": 15, "goals": 3, "from": "Turkey", "position": "FW"
+    },
+  "Vinicius": {
+    "number": 7, "goals": 5, "from": "Brazil", "position": "FW"
+    },
+  "Bellingham": {
+    "number": 5, "goals": 4, "from": "England", "position": "MF"
+    }, 
+  "Coutois": {
+    "number": 1, "goals": 0, "from": "Belgium", "position": "GK"
+    },
+  "Carvajal": {
+    "number": 2, "goals": 0, "from": "Spain", "position": "DF"
+    },
+  "Rodrigo": {
+    "number": 11,  "goals": 1, "from": "Brazil", "position": "FW"
+    },
+  "Valverde": {
+    "number":8, "goals": 0, "from": "Uruguay", "position": "MF"
+    },
+  "Camavinga": {
+    "number": 6, "goals": 1, "from": "France", "position": "MF"
+    },
+  "Tchouaméni": {
+    "number": 14, "goals": 0, "from": "France", "position": "MF"
+    },
+  "Arnold": {
+    "number": 12, "goals": 0, "from": "England", "position": "DF"
+  }
+}
+
+favorite_player = ""
+def player_registration():#選手登録
+  global favorite_player
+  favorite_player = input("好きな選手を入力してください: ()").lower()
+  all_players = set()
+  for plyaer in real_madrid.keys():
+    all_players.add(plyaer.lower())
   
- 
-    
+
+def player_country_support():
+  global favorite_player
+  if favorite_player not in real_madrid:
+    return "その選手はレアル・マドリードにいません。正しい名前を入力し。"
+  else:
+    coutry = real_madrid[favorite_player.capitalize()["from"]]
+    return f"来年のワールドカップで{favorite_player}がいる{coutry}代表を応援しましょう！"
+
+print(player_registration())
+print(player_country_support())
+  
+
+
+
+
 
